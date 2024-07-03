@@ -2,7 +2,7 @@ package strategy
 
 import (
 	"math"
-	"math/rand/v2"
+	"math/rand"
 	"time"
 )
 
@@ -38,7 +38,8 @@ import (
 //
 // reference: https://cloud.google.com/memorystore/docs/redis/exponential-backoff
 func ExponentialBackoff(n int, maximumBackoff float64) time.Duration {
-	randomNumber := float64(1<<n) + rand.Float64()
+	x := 1 << n
+	randomNumber := float64(x) + rand.Float64()
 
 	waitTime := math.Min(randomNumber, maximumBackoff)
 

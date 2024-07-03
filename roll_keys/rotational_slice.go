@@ -24,9 +24,11 @@ func NewRotationalSlice[T any](slice []T, r int, options ...func(*RotationalSlic
 		ls[i] = NewLimiter(obj, r)
 	}
 
+	var count int64 = 0
+
 	c := &RotationalSlice[T]{
 		s:            ls,
-		pickStrategy: CircularPick[*Limiter[T]](0),
+		pickStrategy: CircularPick[*Limiter[T]](&count),
 	}
 
 	for _, option := range options {

@@ -5,7 +5,7 @@ Assemble strategy for GO, ex: Exponential backoff, API Group Sender, Rollkey
 
 # Install
 ```bash 
-go get -u github.com/FPNL/go-helpers
+go get -u github.com/FPNL/go-strategy
 ```
 
 # Sync API

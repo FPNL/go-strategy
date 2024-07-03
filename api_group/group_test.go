@@ -83,7 +83,7 @@ func TestWithWaitExponentStrategy(t *testing.T) {
 
 	maxRetry := 2
 	givenStrategy := WaitExponentialBackoff(32)
-	var expectWaitSeconds = float64((1+(2^(maxRetry-1)))*maxRetry) + 1
+	var expectWaitSeconds = float64(3)
 
 	// when
 	groupAPI := NewGroupAPI(

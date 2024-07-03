@@ -3,7 +3,7 @@ package api_group
 import (
 	"time"
 
-	"github.com/FPNL/go-helper/strategy"
+	"github.com/FPNL/go-strategy/strategy"
 )
 
 func JustWait(duration time.Duration) func(int) {
