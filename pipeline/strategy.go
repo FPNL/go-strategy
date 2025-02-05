@@ -1,4 +1,4 @@
-package api_group
+package pipeline
 
 import (
 	"time"
