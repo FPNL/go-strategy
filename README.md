@@ -10,9 +10,9 @@ Assemble strategy for GO, ex: Exponential backoff, API Group Sender, Rollkey
 go get -u github.com/FPNL/go-strategy
 ```
 
-# Sync API
+# Pipeline
 
-APIs that need to be called in sequence, if one of them fails, the rollback API will be called in reverse order.
+Functions that need to be called in sequence, if one of them fails, the cancel Functions will be called in reverse order.
 
 ```go
 // when
